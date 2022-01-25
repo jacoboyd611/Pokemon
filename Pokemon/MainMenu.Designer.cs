@@ -42,7 +42,7 @@ namespace Pokemon
             this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.playButton.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.Location = new System.Drawing.Point(374, 213);
+            this.playButton.Location = new System.Drawing.Point(365, 246);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(222, 78);
             this.playButton.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace Pokemon
             this.instructionsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.instructionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.instructionsButton.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructionsButton.Location = new System.Drawing.Point(374, 297);
+            this.instructionsButton.Location = new System.Drawing.Point(365, 330);
             this.instructionsButton.Name = "instructionsButton";
             this.instructionsButton.Size = new System.Drawing.Size(222, 78);
             this.instructionsButton.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace Pokemon
             this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(374, 381);
+            this.exitButton.Location = new System.Drawing.Point(365, 414);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(222, 78);
             this.exitButton.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace Pokemon
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Pokemon.Properties.Resources.pokemonLogo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(196, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(187, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(553, 381);
             this.pictureBox1.TabIndex = 4;

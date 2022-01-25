@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Pokemon
 {
-    class Player
+    public class Player
     {
         public int x, y, width, height, speed, counter = 0;
         string lastDirection = "up";
@@ -42,6 +42,7 @@ namespace Pokemon
             feetRec = new Rectangle(x, y + height, width, height);
 
         }
+
         public void Move(bool left, bool right, bool up, bool down, List<Rectangle> walls)
         {
             if (left && collision(walls, x, y + height / 2))

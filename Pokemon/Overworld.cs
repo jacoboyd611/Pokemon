@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Threading;
 
 namespace Pokemon
 {
@@ -18,7 +19,7 @@ namespace Pokemon
         Random rand = new Random();
 
         Brush black = new SolidBrush(Color.Black);
-        Player player;
+        public static Player player = new Player(186, 518, 20, 30);
         bool leftArrowDown;
         bool rightArrowDown;
         bool downArrowDown;
@@ -28,25 +29,22 @@ namespace Pokemon
         {
             InitializeComponent();
             ReadXml();
-
-            player = new Player(186, 518, 20, 30);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             player.Move(leftArrowDown, rightArrowDown, upArrowDown, downArrowDown, walls);
             if (player.Encounter(grass)) { encounterTimer.Enabled = true; }
-            else { encounterTimer.Enabled = false;}
+            else { encounterTimer.Enabled = false; }
             Refresh();
         }
-
         private void Overworld_Paint(object sender, PaintEventArgs e)
         {
             //test rectangles
             //foreach(Rectangle rec in walls) { e.Graphics.FillRectangle(black, rec); }
             //e.Graphics.FillRectangle(black, player.feetRec);
 
-            e.Graphics.DrawImage(player.currentImage, player.x, player.y, player.width, player.height);       
+            e.Graphics.DrawImage(player.currentImage, player.x, player.y, player.width, player.height);
         }
         private void ReadXml()
         {
@@ -69,6 +67,15 @@ namespace Pokemon
         {
             switch (e.KeyCode)
             {
+                case Keys.A:
+                    Form f = this.FindForm();
+                    f.Controls.Remove(this);
+                    BagScreen screen = new BagScreen();
+                    f.Controls.Add(screen);
+
+                    encounterTimer.Enabled = false;
+                    gameTimer.Enabled = false;
+                    break;
                 case Keys.Left:
                     leftArrowDown = true;
                     break;
@@ -94,7 +101,7 @@ namespace Pokemon
                     rightArrowDown = false;
                     break;
                 case Keys.Up:
-                    upArrowDown = false; 
+                    upArrowDown = false;
                     break;
                 case Keys.Down:
                     downArrowDown = false;
@@ -112,14 +119,12 @@ namespace Pokemon
         }
         private void encounterTimer_Tick(object sender, EventArgs e)
         {
-            if(rand.Next(0,11) == 3) 
+            if (rand.Next(0, 11) == 3)
             {
                 encounterTimer.Enabled = false;
                 gameTimer.Enabled = false;
 
-                //animation?
-
-                Form f = this.FindForm();
+                Form f = FindForm();
                 f.Controls.Remove(this);
 
                 BattleScreen screen = new BattleScreen();

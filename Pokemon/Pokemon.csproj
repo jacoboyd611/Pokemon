@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BagScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BagScreen.Designer.cs">
+      <DependentUpon>BagScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="BattleScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,6 +70,7 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Move.cs" />
     <Compile Include="Overworld.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,8 +78,12 @@
       <DependentUpon>Overworld.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
+    <Compile Include="Pokemon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BagScreen.resx">
+      <DependentUpon>BagScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BattleScreen.resx">
       <DependentUpon>BattleScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,7 +267,21 @@
     <None Include="Resources\tile024.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\rattataFront.png" />
+    <None Include="Resources\rattataBack.png" />
+    <None Include="Resources\squirtleBack.png" />
+    <None Include="Resources\squirtleFront.png" />
+    <None Include="bin\Debug\Resources\Pokemon1.xml" />
+    <Content Include="Enemy.xml" />
+    <None Include="Resources\charizardBack.png" />
+    <None Include="Resources\charizardFront.png" />
+    <None Include="Resources\pikachuBehind.png" />
+    <None Include="Resources\pikachuFront.png" />
+    <Content Include="Resources\Pokemon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\battleStage.png" />
+    <None Include="bin\Debug\Resources\Pokemon.xml" />
     <Content Include="Resources\overWorld.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
