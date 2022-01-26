@@ -30,18 +30,6 @@ namespace Pokemon
 
         #endregion
 
-        #region Instructions Button
-        private void instructionsButton_Enter(object sender, EventArgs e)
-        {
-            instructionsButton.BackColor = Color.DodgerBlue;
-        }
-        private void instructionsButton_Leave(object sender, EventArgs e)
-        {
-            instructionsButton.BackColor = Color.SteelBlue;
-        }
-
-        #endregion
-
         #region Exit Button
         private void exitButton_Enter(object sender, EventArgs e)
         {
@@ -60,6 +48,16 @@ namespace Pokemon
             f.Controls.Remove(this);
             MainScreen screen = new MainScreen();
             f.Controls.Add(screen);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

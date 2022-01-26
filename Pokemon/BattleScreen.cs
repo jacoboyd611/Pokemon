@@ -77,9 +77,8 @@ namespace Pokemon
         }
         private void BattleScreen_Paint(object sender, PaintEventArgs e)
         {
-            if (Form1.party[currentPokemon].name == "Pikachu" || Form1.party[currentPokemon].name == "Charizard"
-                || Form1.party[currentPokemon].name == "Squirtle") { e.Graphics.DrawImage(Form1.party[currentPokemon].back, moveBox.X + 75, moveBox.Y - 200, 250, 200); }
-            if (enemy.name == "Pikachu" || enemy.name == "Charizard" || enemy.name == "Squirtle") { e.Graphics.DrawImage(enemy.front, playerHealthBox.X+125, playerHealthBox.Y- 200, 100, 100); }
+            e.Graphics.DrawImage(Form1.party[currentPokemon].back, moveBox.X + 75, moveBox.Y - 200, 250, 200); 
+            e.Graphics.DrawImage(enemy.front, playerHealthBox.X+125, playerHealthBox.Y- 200, 100, 100); 
 
             foreach (Rectangle box in boxes)
             {

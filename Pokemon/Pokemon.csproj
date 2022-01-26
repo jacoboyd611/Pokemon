@@ -277,6 +277,10 @@
     <None Include="Resources\charizardFront.png" />
     <None Include="Resources\pikachuBehind.png" />
     <None Include="Resources\pikachuFront.png" />
+    <None Include="Resources\infernapeFront.png" />
+    <None Include="Resources\infernapeBack.png" />
+    <None Include="Resources\pigeottoBack.png" />
+    <None Include="Resources\pigeottoFront.png" />
     <Content Include="Resources\Pokemon.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

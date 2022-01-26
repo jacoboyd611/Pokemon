@@ -87,6 +87,14 @@ namespace Pokemon
                     front = Properties.Resources.rattataFront;
                     back = Properties.Resources.rattataBack;
                     break;
+                case ("Infernape"):
+                    front = Properties.Resources.infernapeFront;
+                    back = Properties.Resources.infernapeBack;
+                    break;
+                case ("Pigeotto"):
+                    front = Properties.Resources.pigeottoFront;
+                    back = Properties.Resources.pigeottoBack;
+                    break;
             }
         }
     }

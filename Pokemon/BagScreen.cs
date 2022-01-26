@@ -39,7 +39,7 @@ namespace Pokemon
         Rectangle swapBox;
         Rectangle bigBox;
 
-        string currentButton = "swap";
+        string currentButton = "heal";
         string menuState = "";
 
         PointF[] triangle;
@@ -108,8 +108,8 @@ namespace Pokemon
                 if (i == selected.Item1 || i == selected.Item2) { e.Graphics.DrawRectangle(orangePen, pokemon[i]); }
                 e.Graphics.DrawString($"{i + 1}", boxFont, blackBrush, pokemon[i].X + buffer, pokemon[i].Y + buffer);
 
-                if (Form1.party[i].name == "Pikachu" || Form1.party[i].name == "Charizard"
-               || Form1.party[i].name == "Squirtle" || Form1.party[i].name == "Rattata") { e.Graphics.DrawImage(Form1.party[i].front, pokemon[i].X + buffer, pokemon[i].Y + buffer, pokemon[i].Width - 2 * buffer, pokemon[i].Height - 2 * buffer); }
+                e.Graphics.DrawImage(Form1.party[i].front, pokemon[i].X + buffer, pokemon[i].Y + buffer, pokemon[i].Width - 2 * buffer, pokemon[i].Height - 2 * buffer); 
+
 
                 if (Form1.party[i] != null)
                 {

@@ -91,6 +91,26 @@ namespace Pokemon.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap infernapeBack {
+            get {
+                object obj = ResourceManager.GetObject("infernapeBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap infernapeFront {
+            get {
+                object obj = ResourceManager.GetObject("infernapeFront", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
         ///&lt;tiles&gt;
         ///  &lt;tile type=&quot;Green&quot; x=&quot;107&quot; y=&quot;80&quot; width=&quot;34&quot; height=&quot;11&quot; /&gt;
@@ -105,6 +125,26 @@ namespace Pokemon.Properties {
         internal static string overWorld {
             get {
                 return ResourceManager.GetString("overWorld", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pigeottoBack {
+            get {
+                object obj = ResourceManager.GetObject("pigeottoBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pigeottoFront {
+            get {
+                object obj = ResourceManager.GetObject("pigeottoFront", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -141,12 +181,12 @@ namespace Pokemon.Properties {
         ///		&lt;move4 name =&quot;&quot; damage=&quot;&quot; type=&quot;&quot;/&gt;
         ///	&lt;/pokemon&gt;
         ///	&lt;pokemon&gt;
-        ///		&lt;name&gt;Pigey&lt;/name&gt;
+        ///		&lt;name&gt;Pigeotto&lt;/name&gt;
         ///		&lt;level&gt;1&lt;/level&gt;
         ///		&lt;health&gt;30&lt;/health&gt;
         ///		&lt;move1 name =&quot;Tackle&quot; damage=&quot;7&quot; type=&quot;normal&quot;/&gt;
         ///		&lt;move2 name =&quot;&quot; damage=&quot;&quot; type=&quot;&quot;/&gt;
-        ///		&lt;move3 name =&quot;&quot; damage=&quot;&quot; type= [rest of string was truncated]&quot;;.
+        ///		&lt;move3 name =&quot;&quot; damage=&quot;&quot; ty [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Pokemon {
             get {

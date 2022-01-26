@@ -25,16 +25,20 @@ namespace Pokemon
         bool downArrowDown;
         bool upArrowDown;
 
+        bool wait = true;
+        int waitCounter = 0;
         public MainScreen()
         {
             InitializeComponent();
+            waitTimer.Enabled = true;
+            waitCounter = 0;
             ReadXml();
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             player.Move(leftArrowDown, rightArrowDown, upArrowDown, downArrowDown, walls);
-            if (player.Encounter(grass)) { encounterTimer.Enabled = true; }
+            if (player.Encounter(grass) && !wait) { encounterTimer.Enabled = true; }
             else { encounterTimer.Enabled = false; }
             Refresh();
         }
@@ -75,6 +79,17 @@ namespace Pokemon
 
                     encounterTimer.Enabled = false;
                     gameTimer.Enabled = false;
+                    waitTimer.Enabled = false;
+                    break;
+                case Keys.Escape:
+                    f = this.FindForm();
+                    f.Controls.Remove(this);
+                    MainMenu main = new MainMenu();
+                    f.Controls.Add(main);
+
+                    encounterTimer.Enabled = false;
+                    gameTimer.Enabled = false;
+                    waitTimer.Enabled = false;
                     break;
                 case Keys.Left:
                     leftArrowDown = true;
@@ -130,6 +145,15 @@ namespace Pokemon
                 BattleScreen screen = new BattleScreen();
                 f.Controls.Add(screen);
             }
+        }
+        private void waitTimer_Tick(object sender, EventArgs e)
+        {
+            if (waitCounter > 10)
+            {
+                waitTimer.Enabled = false;
+                wait = false;
+            }
+            else { waitCounter++; }
         }
     }
 }
